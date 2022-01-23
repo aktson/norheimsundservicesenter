@@ -7,12 +7,15 @@
 body {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas: "header" "hero" "main" "footer";
   font-family: $font-body;
 }
 header {
   grid-area: header;
+}
+.hero {
+  grid-area: hero;
 }
 main {
   grid-area: main;

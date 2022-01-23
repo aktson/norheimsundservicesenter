@@ -13,24 +13,27 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-light shadow-lg bg-light fixed-top p-3">
+      <nav class="navbar navbar-light shadow-lg bg-light fixed-top p-1 ">
         <div class="container-fluid d-flex justify-content-around">
-          <a class="navbar-brand" href="#">Norheimsund SS</a>
+          <a class="navbar-brand" href="index.html"><img src="./images/logo-main.jpg" alt="norheimsund servicesenter logo" class="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Norheimsund SS</h5>
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Norheimsund Servicesenter</h5>
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Hjem</a>
+                  <a class="nav-link active" aria-current="page" href="index.html">Forsida</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Om oss</a>
+                  <a class="nav-link" href="about.html">Om oss</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Kontakt</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -57,11 +60,10 @@
         </div>
       </nav>
     </header>
-  <main>
     <section class="hero">
       <div class="d-flex container-fluid" lc-helper="background" style="height:50vh;background:url(https://images.unsplash.com/photo-1530466951295-f13b9bceb117?ixlib=rb-1.2.1&amp;q=90&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1980&amp;h=768&amp;fit=crop&amp;ixid=eyJhcHBfaWQiOjM3ODR9)  center / cover no-repeat;">
       </div>
-      <div class="container p-5 bg-light shadow-md mb-5" style="margin-top:-100px">
+      <div class="container p-5 shadow-lg bg-light mb-5" style="margin-top:-100px">
         <div class="row">
           <div class="col-md-4 text-center align-self-center">
             <div class="lc-block border-end border-2 ">
@@ -89,81 +91,118 @@
         </div>
       </div>
       </section>
+  <main>
+  
     <!-- section gokjent bilverkstad -->
-    <section class="gookjent container mb-5  ">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card bg-info text-light">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>          
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card bg-info text-light">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card bg-info text-light">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="gookjent container mb-5 " style="margin-top: 100px;">
+   
+<div class="container" >
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<div class="lc-block">
+				<h2 editable="inline" class="display-2 mb-0">Våre tjenester</h2>	
+			</div><!-- /lc-block -->
+		</div>
+	</div>
+	<div class="row mt-4">
+		<div class="col-md-4">
+			<div class="p-lg-5 p-4 shadow">
+				<div class="lc-block mb-4"><img alt="" class="img-fluid" src="./images/godkjent_verksted_small.jpg" style="height:10vh">
+        	<h4 class="my-3" editable="inline">Eu-kontroll</h4>
+					<p editable="inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est.&nbsp;</p>
+					<a class="btn btn-outline-primary" href="#" role="button">Read more</a>
+				</div><!-- /lc-block -->
+			</div>
+		</div><!-- /col -->
+		<div class="col-md-4">
+			<div class="p-lg-5 p-4 shadow">
+				<div class="lc-block mb-4">
+					<img alt="" class="img-fluid" src="./images/first-Stop-Bridgestone.jpg" style="height:10vh">
+					<h4 class="my-3" editable="inline">Dekkhotell</h4>
+					<p editable="inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est.&nbsp;</p>
+					<a class="btn btn-outline-primary" href="#" role="button">Read more</a>
+				</div><!-- /lc-block -->
+			</div>
+		</div><!-- /col -->
+		<div class="col-md-4">
+			<div class="p-lg-5 p-4 shadow">
+				<div class="lc-block mb-4">
+          <img src="./images/hjulstilling.jpg" alt="" class="image-fluid" style="height:10vh">
+
+					<h4 class="my-3" editable="inline">Reparasjon</h4>
+					<p editable="inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est.&nbsp;</p>
+
+					<a class="btn btn-outline-primary" href="#" role="button">Read more</a>
+				</div><!-- /lc-block -->
+			</div>
+		</div><!-- /col -->
+	</div>
+	
   </section>
 
   <!-- offisiel partner  -->
-  <section class="partners  mb-5">
-          <div class="container py-4">
-            <div class="row">
-              <div class="col-md-12 text-center">
-                <div class="lc-block mb-4">
-                  <h2 editable="inline" class="display-2 mb-0">Våre leverandører</h2>
-                  <p editable="inline"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus idligula malesuada placerat sit amet quis enim.</p>
-                </div><!-- /lc-block -->
-              </div>
-            </div>
-            <div class="row mt-4 gap-2">
-              <div class="text-center col-md-4 offset-md-1 py-4 bg-light text-dark shadow-lg">
-                <div class="lc-block">
-                  <div editable="rich">
-                    <h2 class="fw-bold">BilExtra</h2>         
-                  </div>
-                </div>
-                <div class="lc-block px-4 mb-4">
-                  <div editable="rich">
-                    <p>&nbsp;Aenean vel nisi in ipsum congue fermentum et ut arcu. Proin leo diam,
-                      vulputate eu tellus ac, mattis cursus nunc.</p>
-                  </div>
-                </div>
-              </div><!-- /col -->
-              <div class="text-center col-md-4 offset-md-2 py-4 bg-light shadow-lg">
-                <div class="lc-block">
-                  <div editable="rich">
-                   <h2 class="fw-bold"> Super Daek</h2>
-                  </div>
-                </div>
-                <div class="lc-block px-4 mb-4">
-                  <div editable="rich">
-                    <p>&nbsp;Aenean vel nisi in ipsum congue fermentum et ut arcu. Proin leo diam,
-                      vulputate eu tellus ac, mattis cursus nunc.</p>
-                  </div>
-                </div>
-              </div><!-- /col -->
-            </div>
-          </div>
+  <section class="partners  mb-5" style="margin-top: 100px;">
+  
+<div class="container ">
+	<div class="row text-center ">
+		<div class="col-md-12 py-4">
+			<div class="lc-block mb-3">
+				<h2 editable="inline" class="display-4 mt-2 text-primary" style="letter-spacing: -2px;">Våre leverandører</h2>
+				<p editable="inline" class="small"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus <br> id ligula malesuada placerat sit amet quis enim.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row py-3  ">
+		<div class="col-md-6 py-4 my-2 rounded shadow ">
+			<div class="row ">
+				<div class="col-sm-5 d-flex align-self-center">
+					<div class="lc-block">
+						<img src="./images/bilextra-logo.jpg" alt="" class="w-100 p-4">
+					</div>
+				</div>
+				<div class="col-sm-7">
+					<div class="lc-block mt-2 text-primary">
+						<h4 editable="inline"><strong>Let Her Rip!</strong></h4>
+					</div>
+					<div class="lc-block mt-2">
+						<div editable="rich">
+							<p>Nunc viverra ex sit amet malesuada vulputate. Aliquam mi massa, consequat eu convallis sit amet, pharetra sit amet velit. Vivamus luctus, mi non bibendum.</p>
+						</div>
+					</div>
+					<div class="lc-block mt-2 text-end">
+						<a class="btn btn-outline-primary " href="#" role="button">Your CTA link</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 py-4 my-2 rounded shadow bg-light">
+			<div class="row">
+				<div class="col-sm-5 d-flex align-self-center">
+					<div class="lc-block">
+						<img src="./images/first-stop-og-bridgestone.jpg" alt="" class="w-100 p-1">
+					</div>
+				</div>
+				<div class="col-sm-7">
+					<div class="lc-block mt-2 text-primary">
+						<h4 editable="inline"><strong>Right Off the Bat!</strong></h4>
+					</div>
+					<div class="lc-block mt-2">
+						<div editable="rich">
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque.</p>
+						</div>
+					</div>
+					<div class="lc-block mt-2 text-end"><a class="btn btn-outline-primary text-primary" href="#" role="button">Your CTA link</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
     </section>
   </main>
 
   <!-- Site footer -->
-  <footer class="bg-dark text-light">
+  <footer class="bg-dark text-light" style="margin-top: 100px;">
       <div class="container d-flex flex-column justify-content-center p-4 gap-4 mt-4  ">
         <div class="row gap-2  text-lg-start text-center text-md-start">
         <h5 class="border-bottom border-danger mb-5 p-2">Norheimsund Service Senter AS</h5>
