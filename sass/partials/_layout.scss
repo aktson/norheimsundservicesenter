@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   min-height: 100vh;
@@ -29,7 +32,10 @@ h5,
 h6 {
   font-family: $font-heading;
 }
-
-html {
-  scroll-behavior: smooth;
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+#footer {
+  background-color: $gray-900;
 }

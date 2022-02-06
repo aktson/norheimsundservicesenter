@@ -1,14 +1,20 @@
 .logo {
-  max-width: 200px;
-}
-.navbar-active {
-  text-decoration: underline;
+  max-width: 180px;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-  color: $red;
+  border-bottom: 2px solid $danger;
+  transition: all 0.5s ease-in-out;
 }
 .nav-item {
   margin-right: 20px;
   font-size: 1.1em;
+}
+.nav-link {
+  color: black;
+}
+.nav-pills .nav-link.active {
+  border-radius: 0;
+  transition: all 0.5s ease-in;
+  background-color: $primary;
 }

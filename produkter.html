@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Prompt&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon/favicon-32x32.png" />
+    <title>Produkter | Norheimsund servicesenter</title>
+  </head>
+  <body>
+    <header class="mb-5">
+      <nav class="navbar navbar-light shadow-lg bg-light fixed-top navbar-expand-lg  ">
+        <div class="container ">
+          <a class="navbar-brand" href="index.html"><img src="./images/logo-secondary.jpg" alt="norheimsund servicesenter logo" class="logo"></a>
+          <button class="navbar-toggler navbar-dark " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i class="bi bi-list " ></i>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <div class="offcanvas-title mx-auto" id="offcanvasNavbarLabel"><img src="./images/logo-secondary.jpg" alt="site logo" class="logo text-start"></div>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body ">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3  ">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="index.html">Heim</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">Om oss</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tjenester.html">Tjenester</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="produkter.html">Produkter</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Kontakt</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+   
+  <main>
+      <section class="container " style="margin: 100px auto;">
+        <div class="d-flex flex-column flex-sm-row align-items-start" >
+            <div class="nav flex-sm-column flex-row  justify-content-center gap-1 nav-pills me-sm-5 mb-3 shadow-lg gap-3  " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active p-sm-4" id="v-pills-batteri-tab" data-bs-toggle="pill" data-bs-target="#v-pills-batteri" type="button" role="tab" aria-controls="v-pills-batteri" aria-selected="true">Batteri</button>
+              <button class="nav-link p-sm-4" id="v-pills-dekk-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dekk" type="button" role="tab" aria-controls="v-pills-dekk" aria-selected="false">Dekk</button>
+              <button class="nav-link p-sm-4" id="v-pills-felger-tab" data-bs-toggle="pill" data-bs-target="#v-pills-felger" type="button" role="tab" aria-controls="v-pills-felger" aria-selected="false">Felger</button>
+              <button class="nav-link p-sm-4" id="v-pills-Kjetting-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Kjetting" type="button" role="tab" aria-controls="v-pills-Kjetting" aria-selected="false">Kjetting</button>
+              <button class="nav-link p-sm-4" id="v-pills-boat-tab" data-bs-toggle="pill" data-bs-target="#v-pills-boat" type="button" role="tab" aria-controls="v-pills-boat" aria-selected="false">Båt Utstyr</button>
+              <button class="nav-link p-sm-4" id="v-pills-gaupen-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gaupen" type="button" role="tab" aria-controls="v-pills-gaupen" aria-selected="false">Gaupen Tilhenger</button>
+            </div>
+            <div class="tab-content  p-4 " id="v-pills-tabContent" style="height: 100vh;;">
+                <div class="tab-pane fade show active" id="v-pills-batteri" role="tabpanel" aria-labelledby="v-pills-batteri-tab">
+                    <h2>Batteri</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
+                    <img src="./images/tilhenger.jpg" alt="" class="mw-100 ">
+                 </div>
+              <div class="tab-pane fade" id="v-pills-dekk" role="tabpanel" aria-labelledby="v-pills-dekk-tab">
+                <h2>Dekk</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
+                <img src="./images/tilhenger.jpg" alt="" class="mw-100">
+              </div>
+              <div class="tab-pane fade" id="v-pills-felger" role="tabpanel" aria-labelledby="v-pills-felger-tab">
+                <h2>Felger</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
+                <img src="./images/tilhenger.jpg" alt="" class="mw-100">
+              </div>
+              <div class="tab-pane fade" id="v-pills-Kjetting" role="tabpanel" aria-labelledby="v-pills-Kjetting-tab">
+                <h2>Kjetting</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
+                <img src="./images/tilhenger.jpg" alt="" class="mw-100">
+              </div>
+              <div class="tab-pane fade" id="v-pills-boat" role="tabpanel" aria-labelledby="v-pills-boat-tab">
+                <h2>Båt utstyr</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
+                <img src="./images/tilhenger.jpg" alt="" class="mw-100">
+              </div>
+              <div class="tab-pane fade" id="v-pills-gaupen" role="tabpanel" aria-labelledby="v-pills-gaupen-tab">
+                <h2>Gaupen Tilhenger</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
+                <img src="./images/tilhenger.jpg" alt="" class="mw-100">
+              </div>
+            </div>
+          </div>
+    </section>
+    
+  </main>
+
+   <!-- Site footer -->
+   <footer class="bg-dark text-light  position-relative" >
+    <div class="container d-flex flex-column justify-content-center p-4 gap-sm-4  gap-1 mt-4  ">
+      <div class="row gap-1 gap-sm-2  text-lg-start text-center text-md-start justify-content-center  p-2">
+    <h4 class=" border-bottom  border-danger text-center  text-md-start p-4 mb-sm-4 mb-2">Norheimsund Servicesenter AS</h4>
+      <div class="col-md p-4  ">
+        <h5 class="text-danger  mb-3 ">Address:</h5>
+        <p>Hardangerfjordvegen 53</p>
+        <p>
+          <i class="bi bi-geo-alt"></i>
+          5600 Norheimsund
+        </p>
+      </div>
+      <div class="col-md p-4  ">
+        <h5 class="text-danger  mb-3">Kontakt oss:</h5>
+        <p>
+          <i class="bi bi-envelope "></i>
+          post@norhservice.no
+        </p>
+        <p>
+          <i class="bi bi-telephone"></i>
+           56 55 13 10
+        </p>
+      </div>
+      <div class="col-md p-4 "> 
+        <h5 class="text-danger  mb-3 ">Åpningstider:</h5>
+        <p>
+          <i class="bi bi-calendar-week"></i>
+          Mandag- Fredag
+        </p>
+        <p>
+          <i class="bi bi-clock"></i>
+          07.30 - 16.00
+        </p>
+      </div>
+    </div>
+    <div class="row mt-1 mt-md-1 md-gap-2  text-center  text-md-start  ">
+      <div class="col-sm p-sm-4 p-2"><p>@2022 Copyright</p></div>
+      <div class="col-sm p-sm-4 p-2"><a href="#" class="text-light">Terms | Policy</a></div>
+      <div class="col-sm p-sm-4 p-2">
+        <p class="text-danger  mb-3">
+          Følg oss på
+          <i class="bi bi-facebook fs-4 text-light"></i>
+        </p>
+      </div>
+    </div>
+    <div class="position-absolute bottom-0 end-0 p-4 to-top" ><i class="bi bi-arrow-up-circle-fill" style="font-size: 2rem; cursor: pointer;"></i></div>
+</footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
