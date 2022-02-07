@@ -16,9 +16,6 @@ function checkLength(input, len) {
     }
 }
 
-
-//function to show modal on success 
-
 //function to show error first value to takes container(where to show error) and second to message you want to print
 function showError(container, msg) {
     return container.innerHTML = `<p class= "error">${msg}</p>`
@@ -50,8 +47,6 @@ function postFormData(e) {
 
 
     if (checkLength(name.value, 5) && checkValidEmail(email.value) && checkLength(message.value, 15)) {
-
-
         form.reset();
         displayMsg("Your message was sent successfully", "success-msg");
         removeSuccessMsg();
@@ -61,7 +56,7 @@ function postFormData(e) {
 
 function removeSuccessMsg() {
     setTimeout(() => {
-        msgContainer.classList.add("hidden");
+        msgContainer.classList.add("fade");
     }, 5000)
 }
 // global error container to show errors
@@ -78,11 +73,6 @@ function displayMsg(msg, cls) {
     msgContainer.style.display = "block";
     msgContainer.classList.remove("fade")
     closeModalBtn.classList.remove("hidden");
-    // if (!msg) {
-    //     msgContainer.innerHTML = `<p class ="${cls}"> Opps..something went wrong please try something else</p>`
-    // } else {
-    //     msgContainer.innerHTML = `<p class ="${cls}"> ${msg}</p>`
-    // }
 }
 // check for valid email
 function checkValidEmail(email) {
