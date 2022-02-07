@@ -11978,6 +11978,7 @@ body {
       grid-template-rows: auto 1fr auto;
       grid-template-areas: "header" "main" "footer";
   font-family: "Prompt", sans-serif;
+  position: relative;
 }
 
 header {
@@ -12010,14 +12011,16 @@ h1, .h1, h2, .h2 {
   background-color: #212529;
 }
 
+.hidden {
+  display: none;
+}
+
 .logo {
-  max-width: 180px;
+  max-width: 160px;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
   border-bottom: 2px solid #ed1c24;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   font-weight: bold;
   pointer-events: none;
 }

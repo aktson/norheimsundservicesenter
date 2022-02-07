@@ -13,6 +13,7 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "header" "main" "footer";
   font-family: $font-body;
+  position: relative;
 }
 header {
   grid-area: header;
@@ -38,4 +39,7 @@ h2 {
 }
 #footer {
   background-color: $gray-900;
+}
+.hidden {
+  display: none;
 }

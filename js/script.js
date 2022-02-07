@@ -9,3 +9,18 @@ toTopBtn.onclick = function () {
     })
 }
 
+// page on load loader function
+// const loader = document.querySelector(".loader");
+// const main = document.querySelector("main");
+
+// document.onreadystatechange = function () {
+//     if (document.readyState !== "complete") {
+
+//         loader.style.visibility = "visible"
+//         main.style.display = "none";
+//     } else {
+//         loader.style.display = "none";
+//         main.style.display = "block"
+
+//     }
+// }
