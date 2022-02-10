@@ -1,0 +1,26 @@
+.about-img-shape {
+  margin: 30px;
+  z-index: 1;
+}
+.about-img-shape::before {
+  position: absolute;
+  left: -31px;
+  top: -30px;
+  width: 80%;
+  height: 90%;
+  z-index: -1;
+  content: "";
+  background-color: var(--bs-dark);
+  transition: 0.5s;
+}
+.about-img-shape:after {
+  position: absolute;
+  right: -31px;
+  bottom: -30px;
+  width: 80%;
+  height: 90%;
+  z-index: -1;
+  content: "";
+  background-color: var(--bs-dark);
+  transition: 0.5s;
+}
