@@ -12019,6 +12019,11 @@ h1, .h1, h2, .h2 {
   background-color: #e9ecef;
 }
 
+.accordion-button:not(.collapsed) {
+  background-color: #3740ff;
+  color: white;
+}
+
 .logo {
   max-width: 160px;
 }

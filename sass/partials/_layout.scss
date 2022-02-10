@@ -46,3 +46,7 @@ h2 {
 #dekk-felg {
   background-color: $gray-200;
 }
+.accordion-button:not(.collapsed) {
+  background-color: $primary;
+  color: $light;
+}
