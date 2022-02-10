@@ -12015,6 +12015,10 @@ h1, .h1, h2, .h2 {
   display: none;
 }
 
+#dekk-felg {
+  background-color: #e9ecef;
+}
+
 .logo {
   max-width: 160px;
 }
