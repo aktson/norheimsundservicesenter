@@ -44,7 +44,7 @@ function createHtml(result) {
 
     carouselInner.innerHTML += ` 
     <div class="carousel-item " data-bs-interval="10000" >
-        <div class="ratio ratio-16x9" style="height:70vh;background:url('${image}')  center / cover no-repeat;background-color: rgba(0,0,0,0.3); background-blend-mode: overlay;">
+        <div class="ratio ratio-16x9" style="height:50vh;background:url('${image}')  center / cover no-repeat;background-color: rgba(0,0,0,0.3); background-blend-mode: overlay;">
             </div>
         <div class="carousel-caption d-none d-md-block  p-4 " style="background-color:rgba(0,0,0,0.6); width: 50%; margin: 0 auto;">
         <h3 class="fs-1 mb-3">${result.title.rendered} </h3>
