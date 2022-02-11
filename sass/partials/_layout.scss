@@ -33,13 +33,15 @@ h5,
 h6 {
   font-family: $font-heading;
 }
-h1,
-h2 {
-  margin-bottom: 1rem;
+h1 {
+  margin-bottom: 1.5rem !important;
+  color: $gray-900;
 }
 h2 {
   overflow: hidden;
   text-align: center;
+  margin-bottom: 1.5rem;
+  color: $gray-900;
 }
 
 h2:before,
