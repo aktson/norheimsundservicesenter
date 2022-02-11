@@ -11808,7 +11808,7 @@ h2:after,
   height: 1px;
   position: relative;
   vertical-align: middle;
-  width: 8%;
+  width: 7%;
 }
 
 h2:before, .h2:before {
@@ -11849,21 +11849,6 @@ h2:after,
   display: none;
 }
 
-#dekk-felg {
-  background-color: #f8f9fa;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #3740ff;
-  color: white;
-}
-
-.accordion-button::after {
-  background-color: white;
-  border-radius: 50%;
-  padding: 10px;
-}
-
 .logo {
   max-width: 160px;
 }
@@ -11898,10 +11883,6 @@ h2:after,
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   background-color: #3740ff;
-}
-
-#footer {
-  background-color: #212529;
 }
 
 @media (min-width: 265px) {

@@ -50,9 +50,8 @@ h2:after {
   height: 1px;
   position: relative;
   vertical-align: middle;
-  width: 8%;
+  width: 7%;
 }
-
 h2:before {
   right: 0.5em;
   margin-left: -50%;
@@ -62,7 +61,6 @@ h2:after {
   left: 0.5em;
   margin-right: -50%;
 }
-
 #footer {
   background-color: $gray-900;
 }
@@ -81,19 +79,6 @@ h2:after {
     max-width: 50%;
   }
 }
-
 .hidden {
   display: none;
-}
-#dekk-felg {
-  background-color: $gray-100;
-}
-.accordion-button:not(.collapsed) {
-  background-color: $primary;
-  color: $light;
-}
-.accordion-button::after {
-  background-color: $light;
-  border-radius: 50%;
-  padding: 10px;
 }
