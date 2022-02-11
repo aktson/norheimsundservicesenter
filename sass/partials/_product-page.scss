@@ -1,0 +1,12 @@
+#dekk-felg {
+    background-color: $gray-100;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: $primary;
+    color: $light;
+  }
+  .accordion-button::after {
+    background-color: $light;
+    border-radius: 50%;
+    padding: 10px;
+  }
