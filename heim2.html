@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="./images/favicon/favicon-32x32.png" />
-    <title>Heim | Norheimsund servicesenter</title>
+    <title>Heim2 | Norheimsund servicesenter</title>
     <!-- Hotjar Tracking Code for https://norhss.netlify.app/ -->
 <script>
   (function(h,o,t,j,a,r){
@@ -40,10 +40,10 @@
             <div class="offcanvas-body ">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-center ">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Heim</a>
+                  <a class="nav-link " aria-current="page" href="index.html">Heim</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " aria-current="page" href="heim2.html">Heim -2 </a>
+                  <a class="nav-link active" aria-current="page" href="heim2.html">Heim - 2 </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="tjenester.html">Tjenester</a>
@@ -59,64 +59,97 @@
           </div>
         </div>
       </nav>
-    </header>
-   
+    </header> 
   <main>
-    <section class="hero mt-4"  >
-          <div class="d-flex container-fluid " style="height:60vh;background:url('./images/cr-1-compressed.jpg')  center / cover no-repeat;background-color: rgba(0,0,0,0.3); background-blend-mode: overlay;">
-      </div>
-      <div class="container p-1 bg-secondary " style="margin-top:-100px">
+    <section  class="container-fluid g-0 mt-5">
+      <div id="carouselExampleDark" class="carousel carousel-light slide " data-bs-ride="carousel">            
+        <div class="carousel-inner  " id="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <div class="ratio ratio-21x9  " style="height:60vh;background:url('./images/cr-1-compressed.jpg')  center / cover no-repeat;background-color: rgba(0,0,0,0.4); background-blend-mode: overlay;"> </div>
+              <div class="carousel-caption d-none d-sm-block  " > </div>
+            </div>
+          </div>   
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+         </div>   
+    </section>
+    <section>
+      <div class="container p-1 bg-secondary " style="transform: translateY(-100px);">
         <div class="row  justify-content-center align-items-center p-4 ">
           <div class="col-md-5 text-center align-self-center  order-2  order-md-0  p-2">
             <h1 class="fs-1">Ditt godkjent bilverkstad</h1>
-                <p class= "p-1" style= "color: rgba(0,0,0,0.6); font-size:1.3em;">Hos oss får du hjelp til det aller meste med bilen din - alle bilmerker</p>     
+               <p class= "p-1" style= "color: rgba(0,0,0,0.6); font-size:1.3em;">Hos oss får du hjelp til det aller meste med bilen din - alle bilmerker</p>     
           </div><!-- /col -->
           <figure class="col-md-5 p-2 text-center " id="hero-figure">
              <img src="./images/godkjent-vegvesen.jpg" alt="statens vegvesen logo" id="hero-img" >
           </figure><!-- /col -->
         </div>
         </div>   
-        </section>
-
-        <!-- kampanje -->
-        <section  class="container " style="margin-top:100px;">
-          <div id="carouselExampleDark" class="carousel carousel-light slide " data-bs-ride="carousel">            
-            <div class="carousel-inner  " id="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                <div class="ratio ratio-16x9  " style="height:60vh;background:url('./images/cr-1-compressed.jpg')  center / cover no-repeat;background-color: rgba(0,0,0,0.3); background-blend-mode: overlay;"> </div>
-                <div class="carousel-caption d-none d-md-block  p-4 " style="background-color:rgba(0,0,0,0.6); width: 50%; margin: 0 auto;">
-                  <h3 class="fs-1 mb-3">Ditt godkjent bilverkstad </h3>
-                  <p class="fs-4">Hos oss får du hjelp til det aller meste med bilen din - alle bilmerker.</p>
-                </div>
-              </div>
-            </div>
-       
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-       
-          </div>
-          
-        </section>
-   
+    </section>
+    
         <!-- Om oss -->
-        <section class="" style="margin-top: 100px;" data-aos="fade-right" data-aos-duration="1000">
-          <div class="container px-4 py-5 my-5 text-center">
+        <section class="bg-secondary"data-aos="fade-right" data-aos-duration="1000">
+          <div class="container p-4  ">
           
-            <div class="lc-block">
-                <h2 >Om Oss</h2>
-            </div>
-            <div class="lc-block col-lg-6 mx-auto mb-4">
+              <h2 class="">Om Oss</h2>
+              <div class="col-md-8 p-4 mx-auto">
                 <p class="lead ">Vi er et ledende godkjent verkstad Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, deserunt! Vi er et ledende godkjent verkstad Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, deserunt!  </p>
                 <p class="lead ">Vi er et ledende godkjent verkstad Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, deserunt! Vi er et ledende godkjent verkstad Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, deserunt! </p>
             </div>
-          </div>
-        </section>
+                      </div>
+                      
+<div class="container">
+
+	<div class="row pt-4">
+		<div class="col-md-3 text-center py-4">
+			<div class="lc-block"><img alt="" class="rounded-circle mb-3" src="https://images.unsplash.com/photo-1574698550747-3f839e813107?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=772&amp;q=80" style="height:10vh" loading="lazy">
+				<h5 editable="inline"><strong>Terje Fredheim</strong></h5>
+				<small editable="inline" class="text-dark" style="letter-spacing:1px">SOME LIPSUM</small>
+			</div>
+	
+		</div>
+		<div class="col-md-3 text-center py-4">
+			<div class="lc-block"><img alt="" class="rounded-circle mb-3" src="https://images.unsplash.com/photo-1542909192-2f2241a99c9d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" style="height:10vh" loading="lazy">
+				<h5 editable="inline"><strong>Terje Fredheim</strong></h5>
+				<small editable="inline" class="text-dark" style="letter-spacing:1px">SOME LIPSUM</small>
+			</div>
+		</div>
+		<div class="col-md-3 text-center py-4">
+			<div class="lc-block"><img alt="" class="rounded-circle mb-3" src="https://images.unsplash.com/photo-1560329072-17f59dcd30a4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=767&amp;q=80" style="height:10vh" loading="lazy">
+				<h5 editable="inline"><strong>Terje Fredheim</strong></h5>
+				<small editable="inline" class="text-dark" style="letter-spacing:1px">SOME LIPSUM</small>
+			</div>		
+		</div>
+    <div class="col-md-3 text-center py-4">
+			<div class="lc-block"><img alt="" class="rounded-circle mb-3" src="https://images.unsplash.com/photo-1560329072-17f59dcd30a4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=767&amp;q=80" style="height:10vh" loading="lazy">
+				<h5 editable="inline"><strong>Terje Fredheim</strong></h5>
+				<small editable="inline" class="text-dark" style="letter-spacing:1px">SOME LIPSUM</small>
+			</div>		
+		</div>
+	</div>
+  <div class="row">
+
+		<div class="col-md-12 text-center">
+			<div class="lc-block mb-4">
+	
+				<p class="lead bg-warning">Vil du vise fram deg og dine ansatte?? gi meg lyd om du skal eller ikke</p>
+			</div><!-- /lc-block -->
+		</div>
+
+	</div>
+
+</div>
+
+</section>
+        
+
+
 
     <!-- section gokjent bilverkstad -->
     <section class="gookjent container mb-5 " style="margin-top: 100px;" data-aos="fade-up" data-aos-duration="1000">
@@ -167,7 +200,7 @@
 
 
   <!-- offisiel partner  -->
-  <section class="partners  mb-5 " style="margin-top: 100px;" data-aos="fade-up"   data-aos-duration="1000"  >
+  <section class="partners  p-4 " style="margin: 100px auto;" data-aos="fade-up"   data-aos-duration="1000"  >
         <div class="container ">
           <div class="row text-center ">
             <div class="col-md-12 py-4" >
@@ -181,7 +214,7 @@
               <div class="row ">
                 <div class="col-sm-5 d-flex align-self-center">
                   <div class="lc-block">
-                <a href="https://bilxtra.no/" target="_blank"><img src="./images/bilextra-logo.jpg" alt="bixtra logo" class="w-100 p-4"></a> 
+                <a href="https://bilxtra.no/" target="_blank"><img src="./images/bilextra-logo.jpg" alt="bixtra logo" class="w-100 p-2"></a> 
                   </div>
                 </div>
                 <div class="col-sm-7">
@@ -202,12 +235,12 @@
             <div class="col-md-6 py-4 my-2 rounded shadow bg-light">
               <div class="row ">
                 <div class="col-sm-5 d-flex align-self-center">
-                  <div class="lc-block">
+                  <div>
                     <a href="https://www.firststop.no/" target="_blank"> <img src="./images/first-stop-og-bridgestone.jpg" alt="first stop logo" class="w-100 p-1"></a> 
                   </div>
                 </div>
                 <div class="col-sm-7">
-                  <div class="lc-block mt-2">
+                  <div class="mt-2">
                     <div editable="rich">
                       <a href="https://www.firststop.no/" target="_blank"><h4 class="my-3 text-primary">Fitst stop</h4> </a>   
                       <p editable="rich"> First Stop er eit av Europas største nettverk av dekkverkstadar, og er fyrsta valg for det som har med dekk å gjera.</p>

@@ -61,165 +61,32 @@
   <main>
     <!-- tabs for medium to large screens -->
       <section class="container d-none d-sm-block " style="margin: 100px auto;">
-        <div class="d-flex flex-column flex-sm-row align-items-start gap-4" >
-            <div class="nav flex-column flex-row  justify-content-center gap-1 nav-pills me5 mb-3 shadow-lg gap-3  " id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <button class="nav-link active p-4" id="v-pills-batteri-tab" data-bs-toggle="pill" data-bs-target="#v-pills-batteri" type="button" role="tab" aria-controls="v-pills-batteri" aria-selected="true">Batteri</button>
-              <button class="nav-link p-4" id="v-pills-dekk-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dekk" type="button" role="tab" aria-controls="v-pills-dekk" aria-selected="false">Dekk - Felg</button>
-              <button class="nav-link p-4" id="v-pills-olje-tab" data-bs-toggle="pill" data-bs-target="#v-pills-olje" type="button" role="tab" aria-controls="v-pills-olje" aria-selected="false">Olje - filter</button>
-              <button class="nav-link p-4" id="v-pills-Kjetting-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Kjetting" type="button" role="tab" aria-controls="v-pills-Kjetting" aria-selected="false">Kjetting</button>
-              <button class="nav-link p-4" id="v-pills-eksos-tab" data-bs-toggle="pill" data-bs-target="#v-pills-eksos" type="button" role="tab" aria-controls="v-pills-eksos" aria-selected="false">Eksos</button>
-              <button class="nav-link p-4" id="v-pills-gaupen-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gaupen" type="button" role="tab" aria-controls="v-pills-gaupen" aria-selected="false">Gaupen Tilhenger</button>
-              <button class="nav-link p-4" id="v-pills-rekvisita-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rekvisita" type="button" role="tab" aria-controls="v-pills-rekvisita" aria-selected="false">Rekvisita</button>
-              <button class="nav-link p-4" id="v-pills-thule-tab" data-bs-toggle="pill" data-bs-target="#v-pills-thule" type="button" role="tab" aria-controls="v-pills-thule" aria-selected="false">Thule</button>
+        <div class="d-flex flex-column flex-sm-row align-items-start gap-4" id="tabs-container">
+             <div class="nav flex-column flex-row  justify-content-center gap-1 nav-pills me5 mb-3 shadow-lg gap-3  tabs-btn-container" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active p-4" id="v-pills-batteri-tab" data-bs-toggle="pill" data-bs-target="#v-pills-batteri" type="button" role="tab" aria-controls="v-pills-batteri" aria-selected="true">Batteri</button>    
             </div>
-            <div class="tab-content  p-4 " id="v-pills-tabContent" style="height: 100vh;;">
+            <div class="tab-content  p-4 tabs-body-container" id="v-pills-tabContent" style="height: 100vh;;"> 
                 <div class="tab-pane fade show active" id="v-pills-batteri" role="tabpanel" aria-labelledby="v-pills-batteri-tab">
                     <h2>Batteri</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
                     <img src="./images/batteri-produkter.jpg" alt="" class="w-75 img-fluid">
                  </div>
-              <div class="tab-pane fade" id="v-pills-dekk" role="tabpanel" aria-labelledby="v-pills-dekk-tab">
-                <h2>Dekk - Felg</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-                <img src="./images/dekk-produkter.jpg" alt="" class="mw-75 img-fluid">
-              </div>
-              <div class="tab-pane fade" id="v-pills-olje" role="tabpanel" aria-labelledby="v-pills-olje-tab">
-                <h2>Olje - Filter</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-                <img src="./images/olje-produkter.jpg" alt="" class="mw-75 img-fluid">
-              </div>
-              <div class="tab-pane fade" id="v-pills-Kjetting" role="tabpanel" aria-labelledby="v-pills-Kjetting-tab">
-                <h2>Kjetting</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-                <img src="./images/kjetting-produkter.jpg" alt="" class="mw-75 img-fluid">
-              </div>
-              <div class="tab-pane fade" id="v-pills-eksos" role="tabpanel" aria-labelledby="v-pills-eksos-tab">
-                <h2>Eksos</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-                <img src="./images/eksos-produkter.jpg" alt="" class="mw-75 img-fluid">
-              </div>
-              <div class="tab-pane fade" id="v-pills-gaupen" role="tabpanel" aria-labelledby="v-pills-gaupen-tab">
-                <h2>Gaupen Tilhenger</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-                <img src="./images/gaupen-produkter.jpg" alt="" class="mw-75 img-fluid">
-              </div>
-              <div class="tab-pane fade" id="v-pills-rekvisita" role="tabpanel" aria-labelledby="v-pills-rekvisita-tab">
-                <h2>Rekvisita </h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-                <img src="./images/rekvisita-produkter.jpg" alt="" class="mw-75 img-fluid">
-              </div>
-              <div class="tab-pane fade" id="v-pills-thule" role="tabpanel" aria-labelledby="v-pills-thule-tab">
-                <h2>Thule</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-                <img src="./images/thule-produkter.jpg" alt="" class="mw-75 img-fluid ">
-              </div>
-            </div>
           </div>
+        </div>
     </section>
     <!-- accordion for mobile screens -->
     <section  class="container d-block d-sm-none my-5">
-      <div class="accordion " id="accordionPanelsStayOpenExample">
+      <div class="accordion accordion-container " id="accordionExample">
         <div class="accordion-item">
-          <h3 class="accordion-header" id="panelsStayOpen-headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          <h3 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Batteri
             </button>
           </h3>
-          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
               <img src="./images/batteri-produkter.jpg" alt="" class="w-50 img-fluid">
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="panelsStayOpen-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-              Dekk - Felg
-            </button>
-          </h3>
-          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-            <div class="accordion-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-              <img src="./images/dekk-produkter.jpg" alt="" class="w-50 img-fluid">
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="panelsStayOpen-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-              Olje - Filter
-            </button>
-          </h3>
-          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-            <div class="accordion-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-              <img src="./images/olje-produkter.jpg" alt="" class="w-50 img-fluid">
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="panelsStayOpen-headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-              Kjetting
-            </button>
-          </h3>
-          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
-            <div class="accordion-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-              <img src="./images/kjetting-produkter.jpg" alt="" class="w-50 img-fluid">
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="panelsStayOpen-headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
-              Eksos
-            </button>
-          </h3>
-          <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
-            <div class="accordion-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-              <img src="./images/eksos-produkter.jpg" alt="" class="w-50 img-fluid">
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="panelsStayOpen-headingSix">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
-              Gaupen Tilhenger
-            </button>
-          </h3>
-          <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
-            <div class="accordion-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-              <img src="./images/gaupen-produkter.jpg" alt="" class="w-50 img-fluid">
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="panelsStayOpen-headingSeven">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
-              Rekvisita
-            </button>
-          </h3>
-          <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
-            <div class="accordion-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-              <img src="./images/rekvisita-produkter.jpg" alt="" class="w-50 img-fluid">
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="panelsStayOpen-headingEight">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
-              Thule
-            </button>
-          </h3>
-          <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEight">
-            <div class="accordion-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci est blanditiis beatae soluta ipsam possimus dicta sint ut perspiciatis vero!</p>
-              <img src="./images/thule-produkter.jpg" alt="" class="w-50 img-fluid">
             </div>
           </div>
         </div>
@@ -290,6 +157,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="js/produkter.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
