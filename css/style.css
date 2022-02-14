@@ -11753,6 +11753,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* > img {
+  max-width: 100%;
+}
+
 body {
   min-height: 100vh;
   display: -ms-grid;
@@ -11906,9 +11910,7 @@ h2:after,
 }
 
 #caption {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 40%;
-  max-width: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #dekk-felg {
