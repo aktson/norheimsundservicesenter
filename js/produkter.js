@@ -31,8 +31,12 @@ function createHtmlBtn(result) {
 `
 }
 
+
+
+
 function createHtmlBody(result) {
     const receivedTag = result.tags[0].name.trim().toLowerCase();
+
     tabsBodyContainer.innerHTML += `
         <div class="tab-pane fade show p-2 " id="v-pills-${receivedTag}" role="tabpanel" aria-labelledby="v-pills-${receivedTag}-tab">
             <h2>${result.name}</h2>

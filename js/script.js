@@ -15,13 +15,11 @@ const body = document.querySelector("body");
 
 document.onreadystatechange = function () {
     if (document.readyState !== "complete") {
-
-        spinner.style.visibility = "visible"
-        main.style.display = "none";
+        spinner.style.visibility = "visible";
+        body.style.display = "none";
     } else {
         spinner.style.display = "none";
-        main.style.display = "block"
-
+        body.style.display = "block"
     }
 }
 
