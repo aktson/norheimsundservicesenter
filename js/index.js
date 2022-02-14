@@ -7,7 +7,7 @@ async function fetchPosts() {
         const data = await response.json();
         data.forEach((item) => {
             createHtml(item)
-            console.log(item)
+
             console.log(item._embedded["wp:featuredmedia"][0].source_url)
         });
     }

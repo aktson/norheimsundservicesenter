@@ -10,18 +10,18 @@ toTopBtn.onclick = function () {
 }
 
 // page on load loader function
-// const loader = document.querySelector(".loader");
-// const main = document.querySelector("main");
+const spinner = document.querySelector("#spinner");
+const body = document.querySelector("body");
 
-// document.onreadystatechange = function () {
-//     if (document.readyState !== "complete") {
+document.onreadystatechange = function () {
+    if (document.readyState !== "complete") {
 
-//         loader.style.visibility = "visible"
-//         main.style.display = "none";
-//     } else {
-//         loader.style.display = "none";
-//         main.style.display = "block"
+        spinner.style.visibility = "visible"
+        main.style.display = "none";
+    } else {
+        spinner.style.display = "none";
+        main.style.display = "block"
 
-//     }
-// }
+    }
+}
 
