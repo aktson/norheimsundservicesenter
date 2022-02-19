@@ -26,7 +26,7 @@
 </script>
   </head>
   <body>
-    <header class="mb-5">
+    <header >
       <nav class="navbar navbar-light shadow-lg bg-light fixed-top navbar-expand-lg  ">
         <div class="container ">
           <a class="navbar-brand" href="index.html"><img src="./images/logo-main.jpg" alt="norheimsund servicesenter logo" class="logo"></a>
@@ -128,62 +128,8 @@
 				<h2 >Våre tjenester</h2>	
 		</div>
 	</div>
-	<div class="row mt-4 text-center" >
-		<div class="col-md-4" data-aos="flip-left" data-aos-duration="1000">
-			<div class="p-lg-4 p-3 shadow-lg h-100 ">
-        <i class="bi bi-list-check tjenster-section-icons"><i class="fa-solid fa-car"></i></i>
-        	<h4 class="my-3" >Eu-kontroll</h4>
-					<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est.</p>
-	
-			</div>
-		</div><!-- /col -->
-		<div class="col-md-4 " data-aos="flip-right" data-aos-duration="1000">
-			<div class="p-lg-4 p-3 shadow-lg h-100">
- 
-         <i class="fa-solid fa-oil-can tjenster-section-icons p-3"></i>
-  
-					<h4 class="my-3" >Service / Oljeskift</h4>
-					<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est.</p>
-          
-			</div>
-		</div><!-- /col -->
-		<div class="col-md-4 " data-aos="flip-right" data-aos-duration="1000">
-			<div class="p-lg-4 p-3 shadow-lg h-100">
-        <i class="bi bi-radioactive tjenster-section-icons"></i>
-					<h4 class="my-3" >Hjulstilling</h4>
-					<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est.</p>
-			</div>
-		</div><!-- /col -->
-	</div>
-  <div class="row mt-4 text-center  ">
-		<div class="col-md-4 " data-aos="flip-left" data-aos-duration="1000">
-			<div class="p-lg-4 p-3 shadow-lg h-100">
-        <i class="bi bi-tools tjenster-section-icons"></i>
-        	<h4 class="my-3" >Reparasjoner</h4>
-					<p >av Brems, forstilling/hjuloppheng, støtdempere, eksos, clutch, startere, dynamoer, batterier</p>
-			</div>
-		</div><!-- /col -->
-		<div class="col-md-4 " data-aos="flip-right" data-aos-duration="1000">
-			<div class="p-lg-4 p-3 shadow-lg h-100">
-        <i class="bi bi-fan tjenster-section-icons"></i>
-					<h4 class="my-3" >Dekkhotell</h4>
-					<p >  med diagnose, kontroll og reparasjon av motorstyring, bensin- og dieselinnsprøytning</p>
-
-			</div>
-		</div><!-- /col -->
-		<div class="col-md-4 " data-aos="flip-right" data-aos-duration="1000">
-			<div class="p-lg-4 p-3 shadow-lg h-100">
-
-        <i class="bi bi-wrench-adjustable tjenster-section-icons"><i class="bi bi-exclamation-diamond fs-2"></i></i>
-					<h4 class="my-3 " >Diagnose</h4>
-     
-					<p >klimaanlegg, oljekjølere, radiatorer  og feilkodelesing </p>
-
-			</div>
-		</div><!-- /col -->
-	</div>
-	
-  </section>
+	<div class="row mt-4 text-center" id="tjenester-container"></div>
+   </section>
 
 
   <!-- offisiel partner  -->
@@ -205,10 +151,9 @@
                   </div>
                 </div>
                 <div class="col-sm-7">
-               
-                  <div class="lc-block mt-2">
+                    <div class="lc-block mt-2">
                     <div editable="rich">
-                      <a href="https://www.firststop.no/" target="_blank">   <h4 class="my-3 text-primary" >BilXtra</h4></a> 
+                      <a href="https://www.bilxtra.no/" target="_blank">   <h4 class="my-3 text-primary" >BilXtra</h4></a> 
                       <p editable="rich"> BilXtra Verksted er ein av bransjens største kjeder med over 250 verkstader.  Me som BilXtra Verkstad tilbyr alle typar service og reparasjonar. 
                         Kjeden har eit godt logistikksystem med god varetilgjengelighet. 
                         </p>
@@ -234,7 +179,6 @@
                       <p editable="rich">Vårt mål er å kunna tilby våre kundar best mulig service, produkt og råd når det gjeld dekk og dekkutrustning.
                         Så når det kjem til dekk, sommar eller vinter-  er First Stop ditt naturlige fyrstavalg!
                         </p>
-          
                     </div>
                   </div>
                 </div>
@@ -312,7 +256,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="js/index.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/index.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
   </body>
 </html>

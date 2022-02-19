@@ -11862,6 +11862,10 @@ h2:after,
   display: none;
 }
 
+header {
+  margin-bottom: 2rem;
+}
+
 .logo {
   max-width: 160px;
 }
@@ -11924,9 +11928,9 @@ h2:after,
 }
 
 .tjenster-section-icons {
-  font-size: 3.5rem;
-  width: 100px;
-  color: rgba(255, 0, 0, 0.5);
+  font-size: 3.2rem;
+  max-height: 100px;
+  color: #ed1c24;
 }
 
 #dekk-felg {
