@@ -11923,6 +11923,12 @@ h2:after,
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.tjenster-section-icons {
+  font-size: 3.5rem;
+  width: 100px;
+  color: rgba(255, 0, 0, 0.5);
+}
+
 #dekk-felg {
   background-color: #f8f9fa;
 }
