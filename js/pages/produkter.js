@@ -1,11 +1,20 @@
-const productUrl = "http://localhost/norhss/wp-json/wc/store/products";
+import { createMenu } from "../generalFunctions/createMenu.js";
+import { displayMessage } from "../generalFunctions/displayMessage.js";
+import { takeToTop } from "../script.js";
+import { baseUrl } from "../settings.js/config.js";
+
+createMenu();
+takeToTop();
+
+
+const productUrl = baseUrl + "wc/store/products";
 
 const tabsBtnContainer = document.querySelector(".tabs-btn-container");
 const tabsBodyContainer = document.querySelector(".tabs-body-container");
 const accordionContainer = document.querySelector(".accordion-container");
 
 
-const fetchProducts = async () => {
+(async function fetchProducts() {
     try {
         const response = await fetch(productUrl);
         const data = await response.json();
@@ -18,11 +27,12 @@ const fetchProducts = async () => {
     }
     catch (error) {
         console.log(error)
+
     }
-}
-fetchProducts();
+})();
 
 
+//creates buttons
 function createHtmlBtn(result) {
 
     const receivedTag = result.tags[0].name.trim().toLowerCase();
@@ -31,24 +41,27 @@ function createHtmlBtn(result) {
 `
 }
 
-
-
-
+//creates body for wide screen
 function createHtmlBody(result) {
     const receivedTag = result.tags[0].name.trim().toLowerCase();
 
     tabsBodyContainer.innerHTML += `
-        <div class="tab-pane fade show p-2 " id="v-pills-${receivedTag}" role="tabpanel" aria-labelledby="v-pills-${receivedTag}-tab">
+        <div class="tab-pane fade show p-4 " id="v-pills-${receivedTag}" role="tabpanel" aria-labelledby="v-pills-${receivedTag}-tab">
             <h2>${result.name}</h2>
             <p >${result.description}</p>
-            <figure class"mx-auto"><img src="${result.images[0].src}" alt="${result.images[0].alt}" class="img-fluid p-4 ">
+            <figure class="text-center  p-4" ><img src="${result.images[0].src}" alt="${result.name}" class="img-fluid  w-50 p-4" /></figure>
         </div>
     `
 }
 
+
+//creates accordion for small screen
 function createAccordion(result) {
 
     const receivedTag = result.tags[0].name.trim().toLowerCase();
+
+    const image = result.images[0].src;
+
 
     accordionContainer.innerHTML += `
         <div class="accordion-item">
@@ -60,7 +73,7 @@ function createAccordion(result) {
             <div id="${receivedTag}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
             <p>${result.description}</p>
-            <img src="${result.images[0].src}" alt="${result.images[0].alt}" class="w-50 img-fluid">
+           <figure class="text-center"> <img src="${image}" alt="${result.name}" class="w-100 img-fluid"></figure>
         
             </div>
             </div>

@@ -1,22 +1,33 @@
-import { postsEmbedUrl } from "./config.js";
-import data from "./tjenesterData.js"
+import { baseUrl } from "../settings.js/config.js";
+import data from "../tjenesterData.js"
+import { createMenu } from "../generalFunctions/createMenu.js";
+import { takeToTop } from "../script.js";
+
+
+createMenu();
+takeToTop();
 
 const carouselInner = document.querySelector("#carousel-inner");
 
 
-async function fetchPosts() {
-    try {
-        const response = await fetch(postsEmbedUrl);
-        const data = await response.json();
+(async function fetchPosts() {
 
-        createHtml(data)
+    const url = baseUrl + "wp/v2/posts?_embed";
+    try {
+        const response = await fetch(url);
+
+        if (response.ok) {
+            const data = await response.json();
+            createHtml(data)
+        }
+
     }
     catch (error) {
         console.log(error)
     }
 
-}
-fetchPosts()
+})()
+
 
 function createHtml(results) {
 
@@ -39,7 +50,7 @@ function createHtml(results) {
 const tjensterContainer = document.querySelector("#tjenester-container");
 
 data.forEach(item => {
-    console.log(item)
+
     tjensterContainer.innerHTML += `<div class="col-md-4 mb-2" data-aos="flip-left" data-aos-duration="1000" data-id=${item.id}">
                                         <div class="p-lg-4 p-3 shadow-lg h-100 ">
                                         <div class="tjenster-section-icons">${item.icon}</div>
