@@ -19,8 +19,10 @@ const carouselInner = document.querySelector("#carousel-inner");
         const response = await fetch(url);
 
         if (response.ok) {
+
             const results = await response.json();
-            const data = results.data.attributes
+            const data = results.data.attributes;
+
             renderAboutSection(data)
         }
 
@@ -36,15 +38,12 @@ const carouselInner = document.querySelector("#carousel-inner");
 function renderAboutSection(result) {
     const aboutContainer = document.querySelector("#about-container");
 
-    // const result = results.attributes;
-    console.log(result)
     aboutContainer.innerHTML += `  
         <div class="lc-block">
-                <h2 >${result.title}</h2>
+           <h2 >${result.title}</h2>
         </div>
         <div class="lc-block col-lg-6 mx-auto mb-4 line-break">
-        <p class="lead line-break">${result.description}</p>
-                
+            <p class="lead line-break">${result.description}</p>          
         </div>`
 }
 
