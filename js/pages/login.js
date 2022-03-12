@@ -1,10 +1,10 @@
 import { displayMessage } from "../generalFunctions/displayMessage.js";
 import { saveToken, saveUser } from "../generalFunctions/storage.js";
-import { baseUrl } from "../settings.js/config.js";
+import { baseUrl } from "../settings/config.js";
 import { takeToTop } from "../script.js";
 import { removeMessage } from "../generalFunctions/removeMessage.js"
-
 import { createMenu } from "../generalFunctions/createMenu.js"
+
 takeToTop();
 createMenu();
 
