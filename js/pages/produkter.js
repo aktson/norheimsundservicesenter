@@ -7,7 +7,7 @@ createMenu();
 takeToTop();
 
 
-const productUrl = baseUrl + "wc/store/products";
+const productUrl = baseUrl + "api/products?populate=*";
 
 const tabsBtnContainer = document.querySelector(".tabs-btn-container");
 const tabsBodyContainer = document.querySelector(".tabs-body-container");
@@ -17,10 +17,13 @@ const accordionContainer = document.querySelector(".accordion-container");
 (async function fetchProducts() {
     try {
         const response = await fetch(productUrl);
-        const data = await response.json();
+        const result = await response.json();
+        const products = result.data
+        console.log(products)
 
-        data.forEach(product => {
+        products.forEach(product => {
             createHtmlBtn(product)
+            console.log(product)
             createHtmlBody(product)
             createAccordion(product)
         });
@@ -35,45 +38,50 @@ const accordionContainer = document.querySelector(".accordion-container");
 //creates buttons
 function createHtmlBtn(result) {
 
-    const receivedTag = result.tags[0].name.trim().toLowerCase();
+    const tag = result.attributes.tag.toLowerCase();
+
     tabsBtnContainer.innerHTML += `
-    <button class="nav-link p-4" id="v-pills-${receivedTag}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-${receivedTag}" type="button" role="tab" aria-controls="v-pills-${receivedTag}" aria-selected="false">${result.name}</button>
+    <button class="nav-link p-4" id="v-pills-${tag}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-${tag}" type="button" role="tab" aria-controls="v-pills-${tag}" aria-selected="false">${result.attributes.title}</button>
 `
 }
 
 //creates body for wide screen
-function createHtmlBody(result) {
-    const receivedTag = result.tags[0].name.trim().toLowerCase();
+function createHtmlBody(results) {
+
+    const result = results.attributes;
+
+    const tag = result.tag.toLowerCase();
+    const image = result.img.data.attributes.url;
 
     tabsBodyContainer.innerHTML += `
-        <div class="tab-pane fade show p-4 " id="v-pills-${receivedTag}" role="tabpanel" aria-labelledby="v-pills-${receivedTag}-tab">
-            <h2>${result.name}</h2>
+        <div class="tab-pane fade show p-4 " id="v-pills-${tag}" role="tabpanel" aria-labelledby="v-pills-${tag}-tab">
+            <h2>${result.title}</h2>
             <p >${result.description}</p>
-            <figure class="text-center  p-4" ><img src="${result.images[0].src}" alt="${result.name}" class="img-fluid  w-50 p-4" /></figure>
+            <figure class="text-center  p-4" ><img src="${image}" alt="${result.title}" class="img-fluid  w-50 p-4" /></figure>
         </div>
     `
 }
 
 
 //creates accordion for small screen
-function createAccordion(result) {
+function createAccordion(results) {
+    const result = results.attributes;
 
-    const receivedTag = result.tags[0].name.trim().toLowerCase();
-
-    const image = result.images[0].src;
+    const tag = result.tag.toLowerCase();
+    const image = result.img.data.attributes.url;
 
 
     accordionContainer.innerHTML += `
         <div class="accordion-item">
             <h3 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${receivedTag}" aria-expanded="false" aria-controls="${receivedTag}">
-            ${result.name}
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${tag}" aria-expanded="false" aria-controls="${tag}">
+            ${result.title}
             </button>
             </h3>
-            <div id="${receivedTag}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div id="${tag}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
             <p>${result.description}</p>
-           <figure class="text-center"> <img src="${image}" alt="${result.name}" class="w-100 img-fluid"></figure>
+           <figure class="text-center"> <img src="${image}" alt="${result.title}" class="w-100 img-fluid"></figure>
         
             </div>
             </div>
