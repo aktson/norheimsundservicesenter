@@ -2,10 +2,16 @@ import { baseUrl } from "../settings.js";
 import data from "../tjenesterData.js"
 import { createMenu } from "../generalFunctions/createMenu.js";
 import { takeToTop } from "../script.js";
+import { getUser, getToken } from "../generalFunctions/storage.js"
+
 
 
 createMenu();
 takeToTop();
+
+const token = getToken();
+
+const username = getUser();
 
 
 //about section fetch
@@ -21,12 +27,10 @@ const carouselInner = document.querySelector("#carousel-inner");
         if (response.ok) {
 
             const results = await response.json();
-            const data = results.data.attributes;
 
-            renderAboutSection(data)
+
+            renderAboutSection(results)
         }
-
-
     }
     catch (error) {
         console.log(error)
@@ -35,8 +39,14 @@ const carouselInner = document.querySelector("#carousel-inner");
 })();
 
 
-function renderAboutSection(result) {
+function renderAboutSection(results) {
     const aboutContainer = document.querySelector("#about-container");
+
+    let editBtn = "";
+    if (username) {
+        editBtn = `<button class ="btn btn-info btn-sm" id="edit-about">Endre</button>`
+    }
+    const result = results.data.attributes;
 
     aboutContainer.innerHTML += `  
         <div class="lc-block">
@@ -44,7 +54,38 @@ function renderAboutSection(result) {
         </div>
         <div class="lc-block col-lg-6 mx-auto mb-4 line-break">
             <p class="lead line-break">${result.description}</p>          
-        </div>`
+        </div>
+        <a data-id=${results.data.id} href="/edit.html?id=${results.data.id}">${editBtn}</span>`
+
+
+    // const editAboutBtn = document.querySelector("#edit-about")
+    // editAboutBtn.onclick = function () {
+
+    //     const id = this.parentElement.dataset.id;
+
+    //     async function editSection() {
+    //         try {
+    //             const url = baseUrl + `api/pages/${id}`;
+    //             const data = JSON.stringify({ data: { title: title, description: description } })
+
+    //             const options = {
+    //                 method: "PUT",
+    //                 body: data,
+    //                 headers: {
+    //                     "Content-Type": "application/json",
+    //                     "Authorization": `Bearer ${token}`
+    //                 }
+    //             }
+
+
+
+    //         }
+    //         catch (error) {
+    //             console.log(error)
+    //         }
+    //     }
+    // }
+
 }
 
 

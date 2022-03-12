@@ -45,8 +45,8 @@ async function doLogin(username, password) {
 
   const messageContainer = document.querySelector("#message-container");
 
-  const url = baseUrl + "jwt-auth/v1/token";
-  const data = JSON.stringify({ username: username, password: password });
+  const url = baseUrl + "api/auth/local";
+  const data = JSON.stringify({ identifier: username, password: password });
 
   const options = {
     method: "POST",
@@ -63,17 +63,17 @@ async function doLogin(username, password) {
 
     messageContainer.innerHTML = "";
 
-    if (result.user_email) {
+    if (result.user) {
       displayMessage("success", "Login successful", "#message-container");
       form.reset();
-      saveToken(result.token);
-      saveUser(result.user_nicename);
+      saveToken(result.jwt);
+      saveUser(result.user);
       removeMessage("#message-container")
       location.href = "/";
 
     }
-    if (result.code) {
-      displayMessage("danger", "Ukjent brukernavn/passord. Vennligst prøv igjen", "#message-container")
+    if (result.error) {
+      displayMessage("danger", "Ugylig brukernavn/passord. Vennligst prøv igjen", "#message-container")
     }
 
   } catch (error) {

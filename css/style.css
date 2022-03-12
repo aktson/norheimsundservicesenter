@@ -11862,8 +11862,12 @@ h2:after,
   display: none;
 }
 
+.line-break {
+  white-space: pre-wrap;
+}
+
 header {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .logo {

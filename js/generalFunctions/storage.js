@@ -15,9 +15,9 @@ export function saveToken(token) {
 export function getUser() {
   const user = getFromStorage(userKey);
   if (user) {
-    return user
+    return user.username;
   } else {
-    return null
+    return null;
   }
 }
 
