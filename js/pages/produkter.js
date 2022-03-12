@@ -1,7 +1,7 @@
 import { createMenu } from "../generalFunctions/createMenu.js";
 import { displayMessage } from "../generalFunctions/displayMessage.js";
 import { takeToTop } from "../script.js";
-import { baseUrl } from "../settings.js/config.js";
+import { baseUrl } from "../config.js";
 
 createMenu();
 takeToTop();

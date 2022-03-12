@@ -1,4 +1,4 @@
-import { baseUrl } from "../settings/config.js";
+import { baseUrl } from "../config.js";
 import data from "../tjenesterData.js"
 import { createMenu } from "../generalFunctions/createMenu.js";
 import { takeToTop } from "../script.js";
