@@ -9,10 +9,10 @@ takeToTop();
 
 const carouselInner = document.querySelector("#carousel-inner");
 
-
+const url = baseUrl + "wp/v2/posts?_embed";
 (async function fetchPosts() {
 
-    const url = baseUrl + "wp/v2/posts?_embed";
+
     try {
         const response = await fetch(url);
 
