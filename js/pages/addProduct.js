@@ -3,6 +3,7 @@ import { takeToTop } from "../script.js";
 import { baseUrl } from "../settings.js";
 import { getToken } from "../generalFunctions/storage.js";
 import { displayMessage } from "../generalFunctions/displayMessage.js";
+import { removeMessage } from "../generalFunctions/removeMessage.js"
 
 createMenu();
 takeToTop();
@@ -106,7 +107,7 @@ async function addProduct(title, description, tag, imgValue) {
       form.reset();
     }
     if (res.error) {
-      throw new Error("Klarte ikke legge til, vennligst prøv igjen!")
+      throw new Error("Klarte ikke å legge til, vennligst prøv igjen!")
     }
 
   }
