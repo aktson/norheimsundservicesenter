@@ -64,7 +64,7 @@ async function doLogin(username, password) {
     messageContainer.innerHTML = "";
 
     if (result.user) {
-      displayMessage("success", "Login successful", "#message-container");
+      displayMessage("success", "Pålogging vellykket!!", "#message-container");
       form.reset();
       saveToken(result.jwt);
       saveUser(result.user);

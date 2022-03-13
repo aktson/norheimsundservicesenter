@@ -8,7 +8,7 @@ const { pathname } = document.location;
 
 
 let authLink = `<li class="nav-item">
-                  <a class="nav-link ${pathname === "/login.html" ? "active" : ""}" href="login.html">Login</a>
+                  <a class="nav-link ${pathname === "/login.html" ? "active" : ""}" href="login.html">Logg inn</a>
                 </li>`  ;
 
 
