@@ -2,10 +2,14 @@ import { createMenu } from "../generalFunctions/createMenu.js";
 import { displayMessage } from "../generalFunctions/displayMessage.js";
 import { takeToTop } from "../script.js";
 import { baseUrl } from "../settings.js";
+import { getUser } from "../generalFunctions/storage.js";
+
+
 
 createMenu();
 takeToTop();
 
+const username = getUser();
 
 const productUrl = baseUrl + "api/products?populate=*";
 
@@ -19,7 +23,6 @@ const accordionContainer = document.querySelector(".accordion-container");
         const response = await fetch(productUrl);
         const result = await response.json();
         const products = result.data
-        console.log(products)
 
         products.forEach(product => {
             createHtmlBtn(product)
@@ -50,8 +53,14 @@ function createHtmlBody(results) {
 
     const result = results.attributes;
 
-    const tag = result.tag.toLowerCase();
-    const image = result.img.data.attributes.url;
+    const tag = result.tag.toLowerCase().trim();
+
+    let image = "../../images/not-found.png";
+    let receivedImg = result.img.data.attributes.url;
+
+    if (receivedImg) {
+        image = receivedImg;
+    }
 
     tabsBodyContainer.innerHTML += `
         <div class="tab-pane fade show p-4 " id="v-pills-${tag}" role="tabpanel" aria-labelledby="v-pills-${tag}-tab">
@@ -67,8 +76,13 @@ function createHtmlBody(results) {
 function createAccordion(results) {
     const result = results.attributes;
 
-    const tag = result.tag.toLowerCase();
-    const image = result.img.data.attributes.url;
+    const tag = result.tag.toLowerCase().trim();
+
+    let image = result.img.data.attributes.url;
+
+    if (!image) {
+        image = "../../images/not-found.png";
+    }
 
 
     accordionContainer.innerHTML += `

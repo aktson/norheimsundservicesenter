@@ -3,6 +3,7 @@ import data from "../tjenesterData.js"
 import { createMenu } from "../generalFunctions/createMenu.js";
 import { takeToTop } from "../script.js";
 import { getUser, getToken } from "../generalFunctions/storage.js"
+import { displayMessage } from "../generalFunctions/displayMessage.js";
 
 
 
@@ -44,7 +45,7 @@ function renderAboutSection(results) {
 
     let editBtn = "";
     if (username) {
-        editBtn = `<button class ="btn btn-info btn-sm" id="edit-about">Endre</button>`
+        editBtn = `<button class ="btn btn-primary btn-sm " id="edit-about">Endre</button>`
     }
     const result = results.data.attributes;
 
@@ -52,39 +53,10 @@ function renderAboutSection(results) {
         <div class="lc-block">
            <h2 >${result.title}</h2>
         </div>
-        <div class="lc-block col-lg-6 mx-auto mb-4 line-break">
+        <div class="lc-block col-lg-6 mx-auto line-break">
             <p class="lead line-break">${result.description}</p>          
         </div>
-        <a data-id=${results.data.id} href="/edit.html?id=${results.data.id}">${editBtn}</span>`
-
-
-    // const editAboutBtn = document.querySelector("#edit-about")
-    // editAboutBtn.onclick = function () {
-
-    //     const id = this.parentElement.dataset.id;
-
-    //     async function editSection() {
-    //         try {
-    //             const url = baseUrl + `api/pages/${id}`;
-    //             const data = JSON.stringify({ data: { title: title, description: description } })
-
-    //             const options = {
-    //                 method: "PUT",
-    //                 body: data,
-    //                 headers: {
-    //                     "Content-Type": "application/json",
-    //                     "Authorization": `Bearer ${token}`
-    //                 }
-    //             }
-
-
-
-    //         }
-    //         catch (error) {
-    //             console.log(error)
-    //         }
-    //     }
-    // }
+        <a data-id=${results.data.id} href="/edit.html?id=${results.data.id}" class="mx-auto">${editBtn}</span>`
 
 }
 
@@ -112,10 +84,17 @@ function renderAboutSection(results) {
 
 function createHtml(results) {
     const carouselInner = document.querySelector("#carousel-inner");
+    let btn = "";
+
+    if (username) {
+        btn = `<button class ="btn btn-danger btn-sm text-light" id="delete-button">Slett</button>`
+
+    }
 
     results.forEach((result) => {
         const post = result.attributes;
-        const receivedImage = post.img.data.attributes.url
+        const receivedImage = post.img.data.attributes.url;
+
 
         carouselInner.innerHTML += ` <div class="carousel-item " data-bs-interval="10000" >
                                     <div class="ratio ratio-21x9" style="height:60vh;background:url('${receivedImage}')  center / cover no-repeat;background-color: rgba(0,0,0,0.5); background-blend-mode: overlay;">
@@ -123,11 +102,57 @@ function createHtml(results) {
                                     <div class="carousel-caption  d-none d-md-block p-2 "  id="caption" >
                                     <h5 class="fs-3 mb-3">${post.title} </h5>
                                     <p >${post.description}</p>
+                                    <span data-id=${result.id}>${btn}</span>
                                     </div>
-                                </div>
-    `
+                                </div> `
+
+        const deleteBtns = document.querySelectorAll("#delete-button");
+
+        deleteBtns.forEach(deleteBtn => {
+            deleteBtn.addEventListener("click", deletPost)
+        })
     });
 }
+
+async function deletPost(event) {
+
+    const id = event.target.parentElement.dataset.id;
+
+    const url = baseUrl + `api/posts/${id}`;
+    const options = {
+        method: "DELETE",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    }
+    let doDelete = window.confirm("Er du sikker på at du vil slette?");
+
+    if (doDelete) {
+        try {
+
+            const response = await fetch(url, options);
+
+            if (response.ok) {
+                const result = await response.json();
+                displayMessage("success", "Kampanje slettet!!", "#message-container");
+                location.reload();
+
+            }
+
+            if (response.error) {
+                throw new Error("Klarte ikke å slette, vennligst prøv igjen!")
+            }
+
+        } catch (error) {
+            console.log(error);
+            displayMessage("danger", "Noe gikk galt!!", "#message-container")
+        }
+
+    }
+
+
+}
+
 
 //tjenester section fetch data from tjenesteData.js
 const tjensterContainer = document.querySelector("#tjenester-container");

@@ -13,12 +13,25 @@ let authLink = `<li class="nav-item">
 
 
 if (username) {
-  authLink = `<li class="nav-item">
-                  <span class="nav-link text-danger" >"Hei ${username}"</span>
-                </li> 
-                <li class="nav-item" >
-                    <button class="btn btn-danger btn-sm text-light nav-link" id="logout" >Logout</button>
-                </li>`
+  authLink = `<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Legge til
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item  ${pathname === "/addProduct.html" ? "active" : ""}" href="addProduct.html">Produkt</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item ${pathname === "/addCampaign.html" ? "active" : ""}" href="addCampaign.html">Kampanje</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link text-danger pe-none" >"Hei ${username.toUpperCase()}"</span>
+              </li>
+              <li class="nav-item" >
+                <button class="btn btn-danger btn-sm text-light nav-link" id="logout" >Logout</button>
+              </li>`
 }
 
 
