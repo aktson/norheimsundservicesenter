@@ -54,7 +54,7 @@ function handleSubmit(event) {
     titleError.innerHTML = "";
     descriptionError.innerHTML = "";
     imgError.innerHTML = "";
-
+    removeMessage("#message-container")
     addCampaign(titleValue, descriptionValue, imgValue,)
 
   }
