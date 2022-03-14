@@ -90,8 +90,6 @@ function createHtmlBody(results) {
 }
 async function deletProduct(event) {
 
-    console.log(event.target.parentElement.dataset.id);
-
     const id = event.target.parentElement.dataset.id;
 
     const url = baseUrl + `api/products/${id}`;
