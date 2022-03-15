@@ -88,8 +88,7 @@ async function doedit(title, description) {
     if (response.ok) {
       const result = await response.json();
       displayMessage("success", "Endring lagret", "#message-container");
-      console.log(result)
-
+      location.href = "/index.html";
     }
 
 
