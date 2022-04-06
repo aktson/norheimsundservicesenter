@@ -27,10 +27,10 @@ if (username) {
                 </ul>
               </li>
               <li class="nav-item">
-                <span class="nav-link text-danger pe-none" >"Hei ${username.toUpperCase()}"</span>
+                <span class="nav-link text-primary pe-none" >"Hei ${username.toUpperCase()}"</span>
               </li>
               <li class="nav-item" >
-                <button class="btn btn-danger btn-sm text-light nav-link" id="logout" >Logout</button>
+                <button class="btn btn-primary btn-sm text-light nav-link" id="logout" >Logout</button>
               </li>`
 }
 
