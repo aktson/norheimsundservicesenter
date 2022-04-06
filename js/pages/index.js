@@ -72,6 +72,7 @@ function renderAboutSection(results) {
         if (response.ok) {
             const results = await response.json();
             createHtml(results.data)
+
         }
 
     }
@@ -101,7 +102,7 @@ function createHtml(results) {
                                         </div>
                                     <div class="carousel-caption  d-none d-md-block p-2 "  id="caption" >
                                     <h5 class="fs-3 mb-3">${post.title} </h5>
-                                    <p >${post.description}</p>
+                                    <p>${post.description}</p>
                                     <span data-id=${result.id}>${btn}</span>
                                     </div>
                                 </div> `

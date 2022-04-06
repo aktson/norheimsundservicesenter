@@ -97,7 +97,7 @@ async function addCampaign(title, description, imgValue) {
     if (res.ok) {
       const results = await res.json();
       displayMessage("success", "Kampanje lagt til!!", "#message-container");
-      removeMessage("#messge-container")
+      removeMessage("#message-container")
       form.reset();
     }
     if (res.error) {

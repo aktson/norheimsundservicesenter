@@ -58,12 +58,15 @@ function createHtmlBody(results) {
 
     const tag = result.tag.toLowerCase().trim();
 
-    let image = "../../images/not-found.png";
-    let receivedImg = result.img.data.attributes.url;
 
-    if (receivedImg) {
-        image = receivedImg;
+    const image = result.img.data.attributes.url;
+    let defaultImage = "../../images/not-found.png";
+
+
+    if (!image) {
+        defaultImage = image;
     }
+
 
     let btn = "";
 
@@ -109,7 +112,6 @@ async function deletProduct(event) {
             if (response.ok) {
                 const result = await response.json();
                 location.reload();
-
             }
 
             if (response.error) {
@@ -132,12 +134,12 @@ function createAccordion(results) {
 
     const tag = result.tag.toLowerCase().trim();
 
+    let defaulImage = "../../images/not-found.png";
     let image = result.img.data.attributes.url;
 
-    if (!image) {
-        image = "../../images/not-found.png";
+    if (image) {
+        defaulImage = image;
     }
-
 
     accordionContainer.innerHTML += `
         <div class="accordion-item">
@@ -149,8 +151,7 @@ function createAccordion(results) {
             <div id="${tag}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
             <p>${result.description}</p>
-           <figure class="text-center"> <img src="${image}" alt="${result.title}" class="w-100 img-fluid"></figure>
-        
+           <figure class="text-center"> <img src="${defaulImage}" alt="${result.title}" class="w-100 img-fluid"></figure>
             </div>
             </div>
         </div>

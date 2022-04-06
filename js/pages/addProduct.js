@@ -102,8 +102,9 @@ async function addProduct(title, description, tag, imgValue) {
 
     if (res.ok) {
       const results = await res.json();
+
       displayMessage("success", "Produkt lagt til!!", "#message-container");
-      removeMessage("#messge-container")
+      removeMessage("#message-container")
       form.reset();
     }
     if (res.error) {
