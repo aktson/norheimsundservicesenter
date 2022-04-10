@@ -8,7 +8,7 @@ const { pathname } = document.location;
 
 
 let authLink = `<li class="nav-item">
-                  <a class="nav-link ${pathname === "/login.html" ? "active" : ""}" href="login.html">Logg inn</a>
+                  <a class="nav-link ${pathname === "/login.html" ? "active" : ""}" href="login.html"><i class="fa-solid fa-user me-2"></i>Logg inn</a>
                 </li>`  ;
 
 
@@ -30,7 +30,7 @@ if (username) {
                 <span class="nav-link text-primary pe-none" >"Hei ${username.toUpperCase()}"</span>
               </li>
               <li class="nav-item" >
-                <button class="btn btn-primary btn-sm text-light nav-link" id="logout" >Logout</button>
+                <button class="btn btn-primary btn-sm text-light nav-link" id="logout" >Logout<i class="fa-solid fa-arrow-right-from-bracket ms-2"></i></button>
               </li>`
 }
 
