@@ -1,12 +1,12 @@
 import { createMenu } from "../generalFunctions/createMenu.js";
-import { takeToTop } from "../script.js";
 import { baseUrl } from "../settings.js";
 import { getToken } from "../generalFunctions/storage.js";
 import { displayMessage } from "../generalFunctions/displayMessage.js";
+import { renderFooter } from "../generalFunctions/renderFooter.js";
 
 
 createMenu();
-takeToTop();
+renderFooter();
 
 const token = getToken();
 if (!token) {

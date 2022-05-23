@@ -1,5 +1,6 @@
 import { createMenu } from "../generalFunctions/createMenu.js";
-import { takeToTop } from "../script.js";
+import { renderFooter } from "../generalFunctions/renderFooter.js";
+
 
 createMenu();
-takeToTop();
+renderFooter();

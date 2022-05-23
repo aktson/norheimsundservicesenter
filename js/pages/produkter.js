@@ -1,14 +1,14 @@
 import { createMenu } from "../generalFunctions/createMenu.js";
 import { displayMessage } from "../generalFunctions/displayMessage.js";
-import { takeToTop } from "../script.js";
 import { baseUrl } from "../settings.js";
 import { getUser, getToken } from "../generalFunctions/storage.js";
+import { renderFooter } from "../generalFunctions/renderFooter.js";
 
 
 
 
 createMenu();
-takeToTop();
+renderFooter();
 
 const username = getUser();
 const token = getToken();
@@ -29,7 +29,7 @@ const accordionContainer = document.querySelector(".accordion-container");
 
         products.forEach(product => {
             createHtmlBtn(product)
-            console.log(product)
+
             createHtmlBody(product)
             createAccordion(product)
         });

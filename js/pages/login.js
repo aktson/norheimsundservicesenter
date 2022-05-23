@@ -1,13 +1,13 @@
 import { displayMessage } from "../generalFunctions/displayMessage.js";
 import { saveToken, saveUser } from "../generalFunctions/storage.js";
 import { baseUrl } from "../settings.js";
-import { takeToTop } from "../script.js";
 import { removeMessage } from "../generalFunctions/removeMessage.js"
 import { createMenu } from "../generalFunctions/createMenu.js"
+import { renderFooter } from "../generalFunctions/renderFooter.js";
 
-takeToTop();
+
 createMenu();
-
+renderFooter();
 
 
 
@@ -69,7 +69,7 @@ async function doLogin(username, password) {
       saveToken(result.jwt);
       saveUser(result.user);
       removeMessage("#message-container")
-      location.href = "/";
+      window.history.go(-1)
 
     }
     if (result.error) {

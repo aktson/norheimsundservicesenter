@@ -1,14 +1,15 @@
 import { baseUrl } from "../settings.js";
 import data from "../tjenesterData.js"
 import { createMenu } from "../generalFunctions/createMenu.js";
-import { takeToTop } from "../script.js";
+
 import { getUser, getToken } from "../generalFunctions/storage.js"
 import { displayMessage } from "../generalFunctions/displayMessage.js";
+import { renderFooter } from "../generalFunctions/renderFooter.js";
 
 
 
 createMenu();
-takeToTop();
+renderFooter();
 
 const token = getToken();
 
@@ -20,7 +21,7 @@ const carouselInner = document.querySelector("#carousel-inner");
 
 
 (async function fetchPage() {
-    const url = baseUrl + "api/pages/1";
+    const url = baseUrl + "api/about";
 
     try {
         const response = await fetch(url);
