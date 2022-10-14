@@ -14,7 +14,7 @@ const username = getUser();
 const token = getToken();
 
 
-const productUrl = baseUrl + "api/products?populate=*";
+const productUrl = baseUrl + "api/nhsses?populate=*";
 
 const tabsBtnContainer = document.querySelector(".tabs-btn-container");
 const tabsBodyContainer = document.querySelector(".tabs-body-container");
